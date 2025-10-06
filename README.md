@@ -11,7 +11,7 @@ Both models are implemented in TensorFlow/Keras and trained on six hive conditio
 
 ---
 ## 🧠 Repository Structure
-
+---
 beehive-vision/
 ├─ src/
 │ ├─ baseline_cnn.py
