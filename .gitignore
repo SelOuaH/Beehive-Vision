@@ -223,7 +223,7 @@ __pycache__/
 *.log
 *.tmp
 
-# Ignore results and figures (optional, if you regenerate them)
+# Ignore results and figures
 results/
 figures/
 
