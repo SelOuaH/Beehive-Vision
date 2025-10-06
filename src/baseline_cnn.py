@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Baseline CNN for beehive image classification.
-No model changes. Only imports and script structuring.
 """
 from pathlib import Path
 import os
@@ -106,38 +105,38 @@ test_flow = eval_gen.flow_from_dataframe(
 print(train_flow.class_indices)
 
 # ----------------------- model ----------------------------
-model3 = Sequential()
-model3.add(Conv2D(CONV_2D_DIM_1, kernel_size=3, input_shape=(IMAGE_HEIGHT, IMAGE_WIDTH, IMAGE_CHANNELS),
+model = Sequential()
+model.add(Conv2D(CONV_2D_DIM_1, kernel_size=3, input_shape=(IMAGE_HEIGHT, IMAGE_WIDTH, IMAGE_CHANNELS),
                   activation='relu', padding='same'))
-model3.add(MaxPool2D(MAX_POOL_DIM))
-model3.add(Dropout(0.2))
-model3.add(Conv2D(CONV_2D_DIM_2, kernel_size=KERNEL_SIZE, activation='relu', padding='same'))
-model3.add(Dropout(0.2))
-model3.add(Flatten())
-model3.add(Dense(num_classes, activation='softmax'))
-model3.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
-model3.summary()
+model.add(MaxPool2D(MAX_POOL_DIM))
+model.add(Dropout(0.2))
+model.add(Conv2D(CONV_2D_DIM_2, kernel_size=KERNEL_SIZE, activation='relu', padding='same'))
+model.add(Dropout(0.2))
+model.add(Flatten())
+model.add(Dense(num_classes, activation='softmax'))
+model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
+model.summary()
 
-annealer3 = LearningRateScheduler(lambda x: 1e-3 * 0.995 ** (x+100))
-earlystopper3 = EarlyStopping(monitor='loss', patience=PATIENCE, verbose=VERBOSE)
-checkpointer3 = ModelCheckpoint('best_model_3.h5',
-                                monitor='val_acc',   # kept as given
+annealer = LearningRateScheduler(lambda x: 1e-3 * 0.995 ** (x+100))
+earlystopper = EarlyStopping(monitor='loss', patience=PATIENCE, verbose=VERBOSE)
+checkpointer = ModelCheckpoint('best_model_3.h5',
+                                monitor='val_acc',   
                                 verbose=VERBOSE,
                                 save_best_only=True,
                                 save_weights_only=True)
 
 # ---------------------- training --------------------------
-history = model3.fit(
+history = model.fit(
     train_flow, epochs=100, validation_data=val_flow,
-    callbacks=[earlystopper3, checkpointer3, annealer3]
+    callbacks=[earlystopper, checkpointer, annealer]
 )
 
 # -------------------- evaluation --------------------------
-test_loss, test_acc = model3.evaluate(test_flow, verbose=1)
+test_loss, test_acc = model.evaluate(test_flow, verbose=VERBOSE)
 print(f"Test Accuracy: {test_acc*100:.2f}%")
 print(f"Test Loss: {test_loss*100:.2f}%")
 
-y_pred_prob = model3.predict(test_flow)
+y_pred_prob = model.predict(test_flow)
 y_pred = np.argmax(y_pred_prob, axis=1)
 y_true = test_flow.classes
 class_labels = classes
