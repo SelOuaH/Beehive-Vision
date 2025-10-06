@@ -118,9 +118,9 @@ If you use this repository, please cite it as:
 
 Released under the **MIT License** — see [LICENSE](LICENSE).
 ---
-## 📧 Contact
+## 👩‍💻 Contact
 **Seloua Haddaoui**  
 📍 [GitHub Profile](https://github.com/SelOuaH)  
-💼 [LinkedIn](https://www.linkedin.com/in/seloua-haddaoui-65789311b)
-💼  [ResearchGate](https://www.researchgate.net/profile/Seloua-Haddaoui?ev=hdr_xprf)
+✉️ [LinkedIn](https://www.linkedin.com/in/seloua-haddaoui-65789311b) 
+💼 [ResearchGate](https://www.researchgate.net/profile/Seloua-Haddaoui?ev=hdr_xprf)
 ---
