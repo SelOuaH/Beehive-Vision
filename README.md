@@ -10,9 +10,8 @@ Both models are implemented in TensorFlow/Keras and trained on six hive conditio
 **Ants, Healthy, QueenLoss, Robbing, SHB, Varroa.**
 
 ---
-
 ## 🧠 Repository Structure
----
+
 beehive-vision/
 ├─ src/
 │ ├─ baseline_cnn.py
@@ -31,13 +30,16 @@ beehive-vision/
 ├─ CITATION.cff
 ├─ LICENSE
 └─ README.md
+---
 
 ## ⚙️ Setup
 
-### Clone the repository
+### 1. Clone the repository
 ```bash
 git clone https://github.com/SelOuaH/beehive-vision.git
 cd beehive-vision
+---
+### 2. Create and activate a virtual environment
 
 python -m venv .venv
 # Windows
