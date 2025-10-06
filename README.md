@@ -13,6 +13,24 @@ Both models are implemented in TensorFlow/Keras and trained on six hive conditio
 
 ## 🧠 Repository Structure
 ---
+beehive-vision/
+├─ src/
+│ ├─ baseline_cnn.py
+│ └─ two_cnn_mlfb_ann.py
+├─ data/
+│ ├─ Ants/
+│ ├─ Healthy/
+│ ├─ QueenLoss/
+│ ├─ Robbing/
+│ ├─ SHB/
+│ └─ Varroa/
+├─ figures/
+├─ results/
+├─ weights/
+├─ requirements.txt
+├─ CITATION.cff
+├─ LICENSE
+└─ README.md
 
 ## ⚙️ Setup
 
