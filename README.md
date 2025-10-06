@@ -109,7 +109,7 @@ If you use this repository, please cite it as:
 ```bash
 @software{haddaoui_beehivevision_2025,
   author  = {Seloua Haddaoui},
-  title   = {Beehive Vision: Baseline CNN and 2CNN-MLFB-ANN},
+  title   = {Beehive Vision: Baseline CNN vs. 2-branches-CNN+MLFB-ANN},
   year    = {2025},
   url     = {https://github.com/SelOuaH/beehive-vision}
 }
