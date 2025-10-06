@@ -20,7 +20,7 @@ from tensorflow.keras.layers import Conv2D, MaxPool2D, Dropout, Flatten, Dense
 from tensorflow.keras.callbacks import LearningRateScheduler, EarlyStopping, ModelCheckpoint
 
 # ------------------------- config -------------------------
-IMAGE_PATH = Path(os.getenv("IMAGE_PATH", r"D:\PhD_2021_\Editings\Article3\Paper 3\Paper 3\Data"))
+IMAGE_PATH = Path(os.getenv("IMAGE_PATH", REPO_ROOT / "data")).resolve()
 SEED = 42
 IMAGE_WIDTH = 200
 IMAGE_HEIGHT = 200
