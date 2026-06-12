@@ -114,6 +114,10 @@ If you use this repository, please cite it as:
   url     = {https://github.com/SelOuaH/beehive-vision}
 }
 ```
+### Cite this article
+
+Haddaoui, S., Varastehpour, S. & Chikhi, S. Image-based honeybee colony conditions detection using a hybrid CNN–ANN framework. SIViP 20, 397 (2026). https://doi.org/10.1007/s11760-026-05469-1
+
 ## 📜 License
 
 Released under the **MIT License** — see [LICENSE](LICENSE).
